@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./Header";
+import Qna from "./Qna";
+import Tags from "./Tags";
+import Score from "./Score";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showQA: false,
+      showScore: false,
+      data: null,
+      cat: null,
+      difficulty: null,
+    };
+  }
+
+  render() {
+    return (
+      <>
+        <Header />
+
+        {this.state.showQA ? (
+          <Qna
+            category={this.state.cat}
+            difficulty={this.state.difficulty}
+            onSubmit={(data, selectedAnswer, score) => {
+              this.setState({
+                showQA: false,
+                showScore: true,
+                data: data,
+                score: score,
+                selectedAnswer: selectedAnswer,
+              });
+            }}
+          />
+        ) : this.state.showScore ? (
+          <Score
+            data={this.state.data}
+            answers={this.state.selectedAnswer}
+            score={this.state.score}
+          />
+        ) : (
+          <Tags
+            onSubmit={(cat, difficulty) =>
+              this.setState({
+                showQA: true,
+                cat: cat,
+                difficulty: difficulty,
+              })
+            }
+          />
+        )}
+      </>
+    );
+  }
 }
 
 export default App;

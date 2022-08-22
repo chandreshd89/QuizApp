@@ -1,0 +1,321 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+/*Flex*/
+
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.jus--space {
+  justify-content: space-between;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.align-self {
+  align-self: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+/*Header*/
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.header {
+  background-color: blue;
+  height: 100px;
+}
+
+img {
+  width: 100%;
+}
+
+.logo {
+  width: 200px;
+}
+
+.nav li a {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/*Quiz*/
+
+h2 {
+  font-size: 2rem;
+  color: orangered;
+  margin: 2rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+button {
+  margin: 0.5rem;
+  background-color: orange;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(128, 128, 128, 0.034);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #ff3d00 transparent;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.quiz-btn {
+  font-size: 1rem;
+}
+
+.invisble {
+  display: none;
+}
+
+/*Card*/
+
+.card {
+  width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 6px;
+  background-color: bisque;
+}
+
+.card button {
+  width: 450px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-size: 2rem;
+  color: black;
+}
+
+small {
+  font-size: 1.5rem;
+  color: #ff3d00;
+}
+
+h3 {
+  background-color: #ff3d00;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin: 1.5rem;
+}
+
+strong {
+  font-size: 1.5rem;
+  color: #ff3d00;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.card .next-btn {
+  width: 60px;
+}
+
+/*Score-Table*/
+
+.score-card {
+  margin-top: 5rem;
+}
+table {
+  border: 1px solid;
+  font-size: 1.5rem;
+}
+
+td,
+th {
+  border: 1px solid;
+  padding: 0.5rem;
+}
+
+.white {
+  color: white;
+}
