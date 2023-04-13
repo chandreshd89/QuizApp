@@ -265,7 +265,6 @@ button {
 }
 
 .card button {
-  width: 450px;
   display: flex;
   justify-content: flex-start;
 }
@@ -296,7 +295,7 @@ p {
   font-size: 1.5rem;
 }
 
-.card .next-btn {
+.card next-btn {
   width: 60px;
 }
 
